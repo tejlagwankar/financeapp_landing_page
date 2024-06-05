@@ -2,6 +2,7 @@
 
 body {
     font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
 }
 
 .nav {
@@ -144,15 +145,17 @@ body {
     display: flex;
     justify-content: start;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .hero-btn-div .watch-now {
     font-size: 20px;
     font-weight: 500;
-    padding-left: 30px;
+    padding: 30px;
     display: flex;
     align-items: center;
     gap: 20px;
+    cursor: pointer;
 }
 
 .hero .img-container,
@@ -380,7 +383,7 @@ body {
 
 .faq-section {
     width: 70%;
-    margin: auto;
+    margin: 64px auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
@@ -455,6 +458,7 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
 .footer-lists .info-1 {
@@ -496,7 +500,6 @@ body {
     color: #FF5555;
 }
 
-
 .footer-lists form {
     display: flex;
     flex-wrap: wrap;
@@ -523,6 +526,23 @@ body {
     font-weight: 600;
 }
 
+@media (max-width: 750px) {
+    /* .hero-text h2 {
+        font-size: 8vw;
+    }
+
+    .hero-text p {
+        font-size: 3vw;
+    } */
+    .ribbon{
+        display: none;
+    }
+
+    .faq-section {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 @media (max-width:900px) {
     .nav ul {
         display: none;
@@ -544,4 +564,26 @@ body {
     .features-section .img-container {
         display: none;
     }
+}
+
+@media (max-width: 1200px) {
+    .hero{
+        margin: auto;
+    }
+    
+    .ad-section .right {
+        display: none;
+    }
+
+    .img-container {
+        display: none;
+    }
+}
+
+@media (max-width: 1500px) {
+    .footer-content{
+        display: grid;
+        gap: 0;
+    }
+
 }
